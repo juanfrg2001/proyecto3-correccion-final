@@ -1,6 +1,6 @@
 class CaloriesController < ApplicationController
-  def index
 
+  def index
   end
 
 end

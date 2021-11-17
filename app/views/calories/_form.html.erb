@@ -1,0 +1,52 @@
+<section class="hero is-fullheight hero3">
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+  <%= form_for(@weight) do |form| %>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="columns is-8 is-variable ">
+          <div class="column is-two-thirds has-text-left">
+            <h1 class="title is-1"><%= name %></h1>
+            <p class="is-size-4"><%= comment %> </p>
+
+          </div>
+          <div class="column is-one-third has-text-left">
+            <div class="field">
+              <label class="label">Calories Eaten</label>
+              <div class="control">
+                <%= form.text_field :eat_calorie, placeholder: "Calories Burned",class:"input is-medium"%>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <%= form.text_area :comment_calories_eaten , placeholder: "Comment of the calories eaten" ,  class:"input is-medium" ,style:"height:180px;"  %>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Calories consumed</label>
+              <div class="control">
+                <%= form.text_field :burn_calorie , placeholder: "Calories consumed" ,  class:"input is-medium"   %>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <%= form.text_area :comment_calories_burned , placeholder: "Comment of the calories burned" ,  class:"input is-medium" ,style:"height:180px;" %>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Date</label>
+              <div class="control">
+                <%= form.date_field :date , placeholder: "Date" ,  class:"input is-medium"   %>
+              </div>
+            </div>
+            <div class="control">
+              <%= form.submit class:"button is-link is-fullwidth has-text-weight-medium is-medium"%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to 'Back', weights_path , class:"button is-link is-fullwidth has-text-weight-medium is-medium"%>
+</section>

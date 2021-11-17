@@ -12,7 +12,91 @@
 
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%- if user_signed_in? %>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <%= image_tag("image_Home/image_home-2.png", width:"50" ,height:"28") %>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            <%= link_to 'Home', weights_path,class:"navbar-item" %>
+          </a>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-light">
+              <%= link_to 'Sign out', '/users/sign_out', :method => :delete, class:"button is-light" %>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+<% else %>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <%= image_tag("image_Home/image_home-2.png", width:"50" ,height:"28") %>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          <%= link_to "Login", new_user_session_path , class:"navbar-item"%>
+        </a>
+
+        <a class="navbar-item">
+          <%= link_to 'Register', new_user_registration_path,class:"navbar-item" %>
+        </a>
+
+        <a class="navbar-item">
+          <%= link_to 'Home', weights_path,class:"navbar-item" %>
+        </a>
+      </div>
+    </div>
+    </div>
+
+  </nav>
+  </header>
+
+
+<% end %>
+<body>
+<%= yield %>
+
+</body>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Hogaru</strong> by <a>Juan Felipe Ruiz</a>. The source code is licensed
+      <a>MIT</a>. The website content
+      is licensed <a>PROYECTO 3</a>.
+    </p>
+  </div>
+</footer>
+
+</html>
+
 </html>

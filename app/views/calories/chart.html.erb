@@ -1,0 +1,22 @@
+<section class="hero is-medium fondo3">
+
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-2">Chart</h1>
+    <div id="hero-input-group" class="field has-addons has-addons-centered">
+    </div>
+  </div>
+</section>
+</br>
+</br>
+<div class="hero-body">
+
+  <div class="hero-body">
+    <h3 class="title is-3">Eat calorie</h3>
+    <%= line_chart Weight.group(:eat_calorie).where(user_id: current_user.id).where("date < (?)", (Date.today + 30) ).count %>
+    </br>
+    <h3 class="title is-3">Burned calorie</h3>
+    <%= line_chart Weight.group(:burn_calorie).where(user_id: current_user.id).where("date < (?)", (Date.today + 30) ).count %>
+  </div>
+
+<%= link_to 'Back', weights_path , class: "button is-link button is-primary is-medium"%>
+</div>
