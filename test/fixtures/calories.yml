@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_calory: 1
+  comment_calory: MyString
+  date_calory: 
+
+two:
+  type_calory: 1
+  comment_calory: MyString
+  date_calory: 

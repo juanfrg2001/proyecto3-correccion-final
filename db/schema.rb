@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_17_125752) do
+ActiveRecord::Schema.define(version: 2021_11_17_130812) do
+
+  create_table "calories", force: :cascade do |t|
+    t.integer "type_calory"
+    t.string "comment_calory"
+    t.date "date_calory"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
