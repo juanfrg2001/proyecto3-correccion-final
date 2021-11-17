@@ -1,5 +1,80 @@
-<h1>Calories#index</h1>
-<p>Find me in app/views/calories/index.html.erb</p>
-<%= link_to "Enter", new_user_session_path , class:"button is-primary"%>
-<%= link_to 'Register', new_user_registration_path,class:"btn btn-default", class:"button is-primary" %>
-<%= link_to 'Sign out', '/users/sign_out', :method => :delete, class:"button is-light" %>
+
+<% if user_signed_in? %>
+  <%= link_to 'Sign out', '/users/sign_out', :method => :delete, class:"button is-light" %>
+<% else %>
+<section class="hero is-medium fondo1">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+    </div>
+  </div>
+</section>
+</br>
+</br>
+<section class="blog-posts">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-10 is-offset-1">
+        <div class="columns featured-post is-multiline">
+          <div class="column is-12 post">
+            <article class="columns featured">
+              <div class="column is-7 post-img ">
+                <%= image_tag("image_Home/imagen_fit_index.jpg",alt:"Featured Image", width: "400") %>
+              </div>
+              <div class="column is-5 featured-content va">
+                <div>
+                  <h3 class="heading post-category">Category Name</h3>
+                  <h1 class="title post-title">Take care of your body</h1>
+                  <p class="post-excerpt">
+                    The most effective way to take care of your body is by recording your calories in order to reach your goal.</p>
+                  <br>
+                  <%= link_to "Enter", new_user_session_path , class:"button is-primary"%>
+                </div>
+
+              </div>
+            </article>
+          </div>
+        </div>
+        </br>
+        <hr>
+        </br>
+        </br>
+        <div class="columns is-multiline">
+          <div class="column post is-6">
+            <article class="columns is-multiline">
+              <div class="column is-12 post-img">
+                <%= image_tag("image_Home/imagen_login2.jpg",alt:"Featured Image", width: "300") %>
+              </div>
+              <div class="column is-12 featured-content ">
+                <h3 class="heading post-category">Category Name</h3>
+                <h1 class="title post-title">Login</h1>
+                <p class="post-excerpt">Welcome back we hope you can keep recording your goals.</p>
+                <br>
+                <%= link_to 'Login', new_user_session_path,class:"btn btn-default", class:"button is-primary" %>
+              </div>
+            </article>
+          </div>
+          <div class="column post is-6">
+            <article class="columns is-multiline">
+              <div class="column is-12 post-img">
+                <%= image_tag("image_Home/image_home_register.jpg",alt:"Featured Image", width: "300") %>
+              </div>
+              <div class="column is-12 featured-content ">
+                <h3 class="heading post-category">Category Name</h3>
+                <h1 class="title post-title">Register</h1>
+                <p class="post-excerpt">Welcome, it's time to start your life by recording your calories to reach your goal</p>
+                <br>
+                <%= link_to 'Register', new_user_registration_path,class:"btn btn-default", class:"button is-primary" %>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</br>
+</br>
+
+
+
+<% end %>
