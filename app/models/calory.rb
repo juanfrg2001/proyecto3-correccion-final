@@ -1,2 +1,2 @@
-class Calory < ApplicationRecord
+class Calory < ActiveRecord::Base
 end
