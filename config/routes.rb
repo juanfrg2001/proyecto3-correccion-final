@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'index', to:'calories#index'
   root 'calories#index'
   resources :calories
   devise_for :users

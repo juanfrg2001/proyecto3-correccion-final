@@ -1,154 +1,16 @@
 <!DOCTYPE html>
 <html>
-<title>Proyecto3Hogaru</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<%= csrf_meta_tags %>
-<%= csp_meta_tag %>
+  <head>
+    <title>Pr3Hogaru</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-<%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Admin - Free Bulma template</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-<!-- Bulma Version 0.9.0-->
-<link rel="stylesheet" type="text/css" href="../css/admin.css">
-<link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
-<link rel="stylesheet" type="text/css" href="../css/documentation.css" />
-<script src="https://kit.fontawesome.com/2828f7885a.js"
-        integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
-        crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" href="favicon.png" />
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=" sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<title>Register - Free Bulma template</title>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" type="text/css" href="../css/register.css">
-
-
-<title>Ghost Style Blog - Free Bulma template</title>
-<script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-<link rel="stylesheet" type="text/css" href="../css/ghost-blog.css">
-
-<link rel="stylesheet" href="css/main.min.css">
-<!-- Fonts -->
-<link rel="dns-prefetch" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
-<title>Showcase - Personal Portfolio One Page Bulma Theme</title>
-<!-- Bulma Version 0.9.0-->
-<link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-<link rel="stylesheet" type="text/css" href="../css/showcase.css" />
-<script
-  src="https://kit.fontawesome.com/2828f7885a.js"
-  integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
-  crossorigin="anonymous"
-></script>
-<link rel="icon" type="image/png" href="favicon.png" />
-</head>
-
-<%- if user_signed_in? %>
-  <header>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <%= image_tag("image_Home/image_home-2.png", width:"50" ,height:"28") %>
-        </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-
-          </a>
-        </div>
-      </div>
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-light">
-              <%= link_to 'Sign out', '/users/sign_out', :method => :delete, class:"button is-light" %>
-            </a>
-          </div>
-        </div>
-      </div>
-      </div>
-    </nav>
-  </header>
-<% else %>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <%= image_tag("image_Home/image_home-2.png", width:"50" ,height:"28") %>
-      </a>
-
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-
-        </a>
-
-        <a class="navbar-item">
-
-        </a>
-
-        <a class="navbar-item">
-
-        </a>
-      </div>
-    </div>
-    </div>
-
-  </nav>
-  </header>
-
-
-<% end %>
-<body>
-<%= yield %>
-
-</body>
-
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>Hogaru</strong> by <a>Juan Felipe Ruiz</a>. The source code is licensed
-      <a>MIT</a>. The website content
-      is licensed <a>PROYECTO 3</a>.
-    </p>
-  </div>
-</footer>
-
+  <body>
+    <%= yield %>
+  </body>
 </html>
-
