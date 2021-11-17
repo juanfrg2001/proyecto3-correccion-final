@@ -5,39 +5,10 @@
   <section class="hero is-medium fondo2">
     <div class="hero-body has-text-centered">
       <div class="container is-max-desktop">
-        <%= form_tag result_path , method: :get do %>
-          <div class="card-content">
-            <div class="content">
-              <p class = "colorWhite">Search filter by date :</p>
-              <div class="control has-icons-left has-icons-right search-field">
-                <%= date_field :keyword,nil ,placeholder:"Beginner date", class:"input is-large" %><span class="icon is-medium is-left"><i class="fa fa-search"></i></span>
-                <%= date_field :keyword2,nil ,placeholder:"Finally date", class:"input is-large" %><span class="icon is-medium is-left"><i class="fa fa-search"></i></span>
-                </br>
-                </br>
-              </div>
-            </div>
-            <%= content_tag :button, type: :submit do %>
-              Search
-            <% end %>
-          </div>
-        <% end %>
+
       </div>
       <div class="container is-max-desktop">
-        <%= form_tag result_comment_path , method: :get do %>
-          <div class="card-content">
-            <div class="content">
-              <p class = "colorWhite">Search filter by comments</p>
-              <div class="control has-icons-left has-icons-right search-field">
-                <%= text_field_tag :keyword3,nil ,placeholder:"What are you looking foro", class:"input is-large",width:"100" %><span class="icon is-medium is-left"><i class="fa fa-search"></i></span>
-                </br>
-                </br>
-              </div>
-            </div>
-            <%= content_tag :button, type: :submit do %>
-              Search
-            <% end %>
-          </div>
-        <% end %>
+
 
       </div>
       <div id="hero-input-group" class="field has-addons has-addons-centered">
@@ -72,16 +43,11 @@
       <div class="content">
         <table class="table is-fullwidth is-striped">
           <tbody>
-          <% @weights.each do |weigth| %>
-            <tr>
-              <td width="5%"><i class="fa fa-bell-o"></i></td>
-              <td><%= weigth.user.email %><a> Register date : </a> <%= weigth.date %></td>
-              <td class="level-right"><%= link_to 'Show' , weigth ,class:"button is-small is-primary" %><a>|</a>  <%= link_to 'Destroy', weigth, method: :delete, data: { confirm: 'Are you sure?' } , class:"button is-small is-primary"%><a>|</a> <%= link_to 'Update', edit_weight_path(weigth), class:"button is-small is-primary" %></td>
-            </tr>
-          <% end %>
+
+
           </tbody>
         </table>
-        <%= paginate @weights %>
+
       </div>
     </div>
     </br>
@@ -132,8 +98,7 @@
       <div class="column is-3">
         <article>
           <figure class="image is-5by3">
-            <%= link_to image_tag("image_Home/image_progress.jpg", alt: "fondo image", width:"160"),
-                        new_weight_path %>
+
           </figure>
           <h2 class="subtitle">Creating Calories Register</h2>
         </article>
@@ -141,8 +106,7 @@
       <div class="column is-3">
         <article>
           <figure class="image is-5by3">
-            <%= link_to image_tag("image_Home/img-progreso_index.jpg", alt: "fondo image", width:"100", height: "100", class:"image"),
-                        chart_path %>
+
           </figure>
           <h2 class="subtitle">See you progress</h2>
         </article>
@@ -158,7 +122,7 @@
             <div class="column is-12 post">
               <article class="columns featured">
                 <div class="column is-7 post-img ">
-                  <%= image_tag("image_Home/imagen-peso.jpg",alt:"Featured Image", width: "400") %>
+
                 </div>
                 <div class="column is-5 featured-content va">
                   <div>
@@ -167,7 +131,7 @@
                     <p class="post-excerpt">
                       Register your weight</p>
                     <br>
-                    <%= link_to "Register", new_load_path , class:"button is-primary", style: "Width:300px"%>
+
                   </div>
 
                 </div>
@@ -183,8 +147,6 @@
       <div class="column is-3">
         <article>
           <figure class="image is-5by3">
-            <%= link_to image_tag("image_Home/image-estadistica.png", alt: "fondo image", style: "Width:130px"),
-                        loads_path %>
           </figure>
           </br>
           <h2 class="subtitle">Estadistics</h2>
