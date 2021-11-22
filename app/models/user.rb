@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
 
   has_many :calories
+  has_many :weights
 
 end

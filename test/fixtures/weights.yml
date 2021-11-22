@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weight: 1
+  date_weight: 2021-11-22
+  years_old: 1
+  height: 1
+  sex: MyString
+  description_weight: MyString
+
+two:
+  weight: 1
+  date_weight: 2021-11-22
+  years_old: 1
+  height: 1
+  sex: MyString
+  description_weight: MyString

@@ -1,6 +1,86 @@
 
 <% if user_signed_in? %>
-  <%= link_to 'Sign out', '/users/sign_out', :method => :delete, class:"button is-light" %>
+
+  <section class="hero is-medium fondo2">
+    <div class="hero-body has-text-centered">
+      <div class="container is-max-desktop">
+      </div>
+      <div class="container is-max-desktop">
+      <div id="hero-input-group" class="field has-addons has-addons-centered">
+      </div>
+    </div>
+    </div>
+  </section>
+  </br>
+  </br>
+  </br>
+  </br>
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <div class="column is-9">
+        <section class="hero is-info welcome is-small">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                Email -- <%= current_user.email %>
+              </h1>
+              <h2 class="subtitle">
+                We hope you can meet your goal today
+              </h2>
+            </div>
+          </div>
+        </section>
+      </div>
+      </br>
+      </br>
+  </div>
+  <br class="featured">
+  <div class="card-table">
+    <div class="content">
+      <table class="table is-fullwidth is-striped">
+        <tbody>
+        <% @calories.each do |calory| %>
+          <tr>
+            <td width="5%"><i class="fa fa-bell-o"></i></td>
+            <td><%= calory.user.email %><a> Register date : </a> <%= calory.date_calory %></td>
+            <td class="level-right"><%= link_to 'Show' , calory ,class:"button is-small is-primary" %><a>|</a>  <%= link_to 'Destroy', calory, method: :delete, data: { confirm: 'Are you sure?' } , class:"button is-small is-primary"%><a>|</a> <%= link_to 'Update', edit_calory_path(calory), class:"button is-small is-primary" %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  </br>
+  </br>
+  </br>
+  </br>
+  <section class="info-tiles">
+    <div class="tile is-ancestor has-text-centered">
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title"></p>
+          <p class="subtitle">Register cont</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  </br>
+    </br>
+    </br>
+    </br>
+    <div class="columns">
+      <div class="column is-3">
+        <article>
+          <figure class="image is-5by3">
+            <%= link_to image_tag("image_Home/image_progress.jpg", alt: "fondo image", width:"160"),
+                        new_calory_path %>
+          </figure>
+          <h2 class="subtitle">Creating Calories Register</h2>
+        </article>
+      </div>
+    </div>
+  </div>
 <% else %>
 <section class="hero is-medium fondo1">
   <div class="hero-body">

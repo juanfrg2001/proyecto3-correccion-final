@@ -1,0 +1,32 @@
+<section class="hero is-medium fondo3">
+
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-2">Your registration about Weight</h1>
+    <div id="hero-input-group" class="field has-addons has-addons-centered">
+    </div>
+  </div>
+</section>
+</br>
+</br>
+<div class="container is-max-desktop">
+  <div class="card-table">
+    <div class="content">
+      <table class="table is-fullwidth is-striped">
+        <tbody>
+        <% @weights.each do |load| %>
+          <tr>
+            <td width="5%"><i class="fa fa-bell-o"></i></td>
+            <td><%= load.user.email %><a> Register date : </a> <%= load.date %></td>
+            <td class="level-right"><%= link_to 'Show' , load ,class:"button is-small is-primary" %><a>|</a>  <%= link_to 'Destroy', load, method: :delete, data: { confirm: 'Are you sure?' } , class:"button is-small is-primary"%><a>|</a> <%= link_to 'Update', edit_load_path(load), class:"button is-small is-primary" %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <%= paginate @weights %>
+    </div>
+  </div>
+  </br>
+  </br>
+  <%= link_to 'Back', weights_path  , class: "button is-link button is-primary is-medium"%>
+</div>
+

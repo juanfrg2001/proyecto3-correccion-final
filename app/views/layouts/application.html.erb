@@ -19,26 +19,40 @@
         <a class="navbar-item" href="https://bulma.io">
           <%= image_tag("image_Home/image_home-2.png", width:"50" ,height:"28") %>
         </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
 
-          </a>
-        </div>
-      </div>
+
+
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-light">
+            <a class="is-light">
               <%= link_to 'Sign out', '/users/sign_out', :method => :delete, class:"button is-light" %>
             </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <%= form_tag calories_path , method: :get do %>
+              <div class="card-content">
+                <div class="content">
+                  <p class = "colorWhite">Search filter by date :</p>
+                  <div class="control has-icons-left has-icons-right search-field">
+                    <%= date_field :keyword,nil ,placeholder:"Beginner date", class:"input is-large" %><span class="icon is-medium is-left"><i class="fa fa-search"></i></span>
+                    <%= date_field :keyword2,nil ,placeholder:"Finally date", class:"input is-large" %><span class="icon is-medium is-left"><i class="fa fa-search"></i></span>
+                    </br>
+                    </br>
+                  </div>
+                </div>
+                <%= content_tag :button, type: :submit do %>
+                  Search
+                <% end %>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>

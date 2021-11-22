@@ -2,48 +2,57 @@
   <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %>"><%= message %></div>
   <% end %>
-  <%= form_for(@calory) do |form| %>
+  <%= form_for(@weight) do |form| %>
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="columns is-8 is-variable ">
           <div class="column is-two-thirds has-text-left">
-            <h1 class="title is-1"><%= name %></h1>
+            <h1 class="title is-1"><%= title %></h1>
             <p class="is-size-4"><%= comment %> </p>
 
           </div>
           <div class="column is-one-third has-text-left">
             <div class="field">
-              <label class="label">Type of calories</label>
+              <label class="label">Your weight</label>
               <div class="control">
-                <%= form.text_field :type_calory, placeholder: "Calories Burned",class:"input is-medium"%>
+                <%= form.text_field :weight, placeholder: "Weight",class:"input is-medium"%>
               </div>
             </div>
             <div class="field">
-              <label class="label">In what made them</label>
+              <label class="label">Years old</label>
               <div class="control">
-                <%= form.text_field :description_calory, placeholder: "Calories Burned",class:"input is-medium"%>
+                <%= form.text_field :years_old, placeholder: "years_old",class:"input is-medium"%>
               </div>
             </div>
             <div class="field">
-              <label class="label">Calorie comment</label>
+              <label class="label">Height in cm</label>
               <div class="control">
-                <%= form.text_field :comment_calory , placeholder: "Comment of the calories eaten" ,  class:"input is-medium" ,style:"height:180px;"  %>
+                <%= form.text_field :height, placeholder: "Height",class:"input is-medium"%>
               </div>
             </div>
-
             <div class="field">
-              <label class="label">Amount of calories</label>
+              <label class="label">Sex</label>
+              <p>Please enter F or M</p>
               <div class="control">
-                <%= form.text_field :cont_calories , placeholder: "Comment of the calories eaten" ,  class:"input is-medium"  %>
+                <%= form.text_field :sex, placeholder: "Sex",class:"input is-medium"%>
               </div>
             </div>
-
             <div class="field">
               <label class="label">Date</label>
+              <p>Please enter Date</p>
               <div class="control">
-                <%= form.date_field :date_calory , placeholder: "Date" ,  class:"input is-medium"   %>
+                <%= form.date_field :date_weight, placeholder: "Date",class:"input is-medium"%>
               </div>
             </div>
+
+            <div class="field">
+              <label class="label">description_weight</label>
+              <p>Please enter a short descrip[tion about your weight</p>
+              <div class="control">
+                <%= form.text_area :description_weight, placeholder: "Date",class:"input is-medium"%>
+              </div>
+            </div>
+
             <div class="control">
               <%= form.submit class:"button is-link is-fullwidth has-text-weight-medium is-medium"%>
             </div>
@@ -52,5 +61,5 @@
       </div>
     </div>
   <% end %>
-  <%= link_to 'Back', calories_path , class:"button is-link is-fullwidth has-text-weight-medium is-medium"%>
+  <%= link_to 'Back', weights_path , class:"button is-link is-fullwidth has-text-weight-medium is-medium"%>
 </section>

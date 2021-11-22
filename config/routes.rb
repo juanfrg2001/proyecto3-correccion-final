@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'calories#index'
   resources :calories
+  resources :weights
   devise_for :users
 
 

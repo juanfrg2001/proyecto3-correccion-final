@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_17_221507) do
+ActiveRecord::Schema.define(version: 2021_11_22_124219) do
 
   create_table "calories", force: :cascade do |t|
     t.integer "type_calory"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 2021_11_17_221507) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
+    t.integer "cont_calories"
+    t.string "description_calory"
     t.index ["user_id"], name: "index_calories_on_user_id"
   end
 
@@ -30,9 +32,24 @@ ActiveRecord::Schema.define(version: 2021_11_17_221507) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "cont_register"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "weights", force: :cascade do |t|
+    t.integer "weight"
+    t.date "date_weight"
+    t.integer "years_old"
+    t.integer "height"
+    t.string "sex"
+    t.string "description_weight"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_weights_on_user_id"
+  end
+
   add_foreign_key "calories", "users"
+  add_foreign_key "weights", "users"
 end

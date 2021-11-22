@@ -1,0 +1,38 @@
+<section class="hero is-medium fondo3">
+
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-2">Your registration</h1>
+    <div id="hero-input-group" class="field has-addons has-addons-centered">
+    </div>
+  </div>
+</section>
+</br>
+</br>
+<div class="container is-max-desktop">
+  <div class="card-table">
+    <div class="content">
+      <table class="table is-fullwidth is-striped">
+        <thead>
+        <tr>
+          <th>Weight</th>
+          <th>Height</th>
+          <th>Year</th>
+          <th>Date</th>
+          <th>Calories Needed</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><%= @weight.weight %></td>
+          <td><%= @weight.height%></td>
+          <td><%= @weight.years_old%></td>
+          <td><%= @weight.sex%></td>
+          <td><strong><%= @weight.date_weight %></strong></td>
+          <td><%= @weight.description_weight%></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <%= link_to 'Back', weights_path , class: "button is-link button is-primary is-medium"%>
+</div>
