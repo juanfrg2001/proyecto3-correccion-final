@@ -10,13 +10,9 @@
 </br>
 <div class="hero-body">
 
-  <div class="hero-body">
-    <h3 class="title is-3">Eat calorie</h3>
-    <%= line_chart Weight.group(:eat_calorie).where(user_id: current_user.id).where("date < (?)", (Date.today + 30) ).count %>
-    </br>
-    <h3 class="title is-3">Burned calorie</h3>
-    <%= line_chart Weight.group(:burn_calorie).where(user_id: current_user.id).where("date < (?)", (Date.today + 30) ).count %>
-  </div>
+  <%= line_chart @calories.map { |goal|
+    {name: goal.type_calory, data: goal.feats.group_by_day(:date_calory).count}
+  } %>
 
 <%= link_to 'Back', weights_path , class: "button is-link button is-primary is-medium"%>
 </div>

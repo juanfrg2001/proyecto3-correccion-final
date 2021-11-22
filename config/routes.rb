@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
   root 'calories#index'
+  get 'chart', to: 'calories#chart'
   resources :calories
   resources :weights
   devise_for :users
 
-
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
