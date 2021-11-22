@@ -7,13 +7,9 @@ class CaloriesController < ApplicationController
     end
   end
   def chart
-    now = Time.now
-    chart_data = Modality.joins(:exam)
-                         .where(exams: {from_date: (now - 1.year)..now}).map {|m|
-      {type_calory: m.name, data: {m.exam.from_date => m.total}}}
-
-    @calory = chart_data.group_by {|h| h[:type_calory]}
-                       .map {|k, v| {type_calory: k, data: v.map {|h| h[:data]}.reduce(&:merge)}}
+    unless current_user.nil?
+      @calories = Calory.where(user_id: current_user.id)
+    end
   end
 
   def new
