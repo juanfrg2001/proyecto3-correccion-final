@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80094ec1-05ce-4551-b651-1e643a050ceb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/db/migrate/20211117221507_add_user_references_to_calories.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20211117234010_add_cont_calories_to_calories.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20211117235933_add_description_calory_to_calories.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/weights.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/weights.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/calories_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/calories_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/calory.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/calory.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/calories/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/calories/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/weights_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/weights_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/weight.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/weight.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/calories/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/calories/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/calories/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/calories/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/weights/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/weights/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/weights/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/weights/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/weights/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/weights/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/weights/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/weights/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +141,7 @@
       <option name="presentableId" value="Default" />
       <updated>1637153760148</updated>
       <workItem from="1637153761430" duration="21025000" />
-      <workItem from="1637583960543" duration="1177000" />
+      <workItem from="1637583960543" duration="4935000" />
     </task>
     <servers />
   </component>

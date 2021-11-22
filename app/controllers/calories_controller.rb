@@ -50,7 +50,7 @@ class CaloriesController < ApplicationController
   end
 
   def calory_params
-    params.require(:calory).permit(:type_calory,:comment_calory,:date_calory)
+    params.require(:calory).permit(:type_calory,:comment_calory,:date_calory,:cont_calories,:description_calory)
   end
 
 end

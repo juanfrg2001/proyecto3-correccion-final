@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_124219) do
+ActiveRecord::Schema.define(version: 2021_11_22_133722) do
 
   create_table "calories", force: :cascade do |t|
-    t.integer "type_calory"
     t.string "comment_calory"
     t.date "date_calory"
     t.datetime "created_at", precision: 6, null: false
@@ -21,6 +20,7 @@ ActiveRecord::Schema.define(version: 2021_11_22_124219) do
     t.integer "user_id", null: false
     t.integer "cont_calories"
     t.string "description_calory"
+    t.string "type_calory"
     t.index ["user_id"], name: "index_calories_on_user_id"
   end
 
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2021_11_22_124219) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
+    t.integer "info_calories"
     t.index ["user_id"], name: "index_weights_on_user_id"
   end
 

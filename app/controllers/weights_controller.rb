@@ -23,7 +23,6 @@ class WeightsController < ApplicationController
 
   def create
     @weight = current_user.weights.new(weight_params)
-    @user = current_user.update_visits_count
     if @weight.save
       flash.now[:success] = 'The article was created succefull'
       redirect_to weights_path

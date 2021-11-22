@@ -4,6 +4,28 @@
   <section class="hero is-medium fondo2">
     <div class="hero-body has-text-centered">
       <div class="container is-max-desktop">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <%= form_tag calories_path , method: :get do %>
+                <div class="card-content">
+                  <div class="content">
+                    <p class = "colorWhite">Search filter by date :</p>
+                    <div class="control has-icons-left has-icons-right search-field">
+                      <%= date_field :keyword,nil ,placeholder:"Beginner date", class:"input is-large" %><span class="icon is-medium is-left"><i class="fa fa-search"></i></span>
+                      <%= date_field :keyword2,nil ,placeholder:"Finally date", class:"input is-large" %><span class="icon is-medium is-left"><i class="fa fa-search"></i></span>
+                      </br>
+                      </br>
+                    </div>
+                  </div>
+                  <%= content_tag :button, type: :submit do %>
+                    Search
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="container is-max-desktop">
       <div id="hero-input-group" class="field has-addons has-addons-centered">
@@ -79,7 +101,52 @@
           <h2 class="subtitle">Creating Calories Register</h2>
         </article>
       </div>
+      <div class="column is-3">
+        <article>
+          <figure class="image is-5by3">
+            <%= link_to image_tag("image_Home/img-progreso_index.jpg", alt: "fondo image", width:"100", height: "100", class:"image"),
+                        calories_path %>
+          </figure>
+          <h2 class="subtitle">See you progress</h2>
+        </article>
+      </div>
     </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <section class="blog-posts">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-10 is-offset-1">
+            <div class="column is-12 post">
+              <article class="columns featured">
+                <div class="column is-7 post-img ">
+                  <%= image_tag("image_Home/imagen-peso.jpg",alt:"Featured Image", width: "400") %>
+                </div>
+                <div class="column is-5 featured-content va">
+                  <div>
+                    <h3 class="heading post-category">Category Name</h3>
+                    <h1 class="title post-title">Weight</h1>
+                    <p class="post-excerpt">
+                      Register your weight</p>
+                    <br>
+                    <%= link_to "Register", new_weight_path , class:"button is-primary", style: "Width:300px"%>
+                    </br>
+                    <br>
+                    <%= link_to "Enter", weights_path , class:"button is-primary", style: "Width:300px"%>
+                  </div>
+
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </br>
+    </br>
+    </br>
   </div>
 <% else %>
 <section class="hero is-medium fondo1">

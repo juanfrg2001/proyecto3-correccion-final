@@ -14,40 +14,27 @@
     <table class="table is-fullwidth is-striped">
       <thead>
       <tr>
-        <th>Eaten calories</th>
+        <th>Type of calorie</th>
         <th>Comment eaten calories</th>
+        <th>Amount of calories</th>
+        <th>Description</th>
         <th>Date</th>
       </tr>
       </thead>
       <tbody>
       <tr>
-        <td><%= @weight.eat_calorie %></td>
-        <td><%= @weight.comment_calories_eaten %></td>
-        <td><strong><%= @weight.date %></strong></td>
+        <td><%= @calory.type_calory %></td>
+        <td><%= @calory.comment_calory %></td>
+        <td><%= @calory.cont_calories %></td>
+        <td><%= @calory.description_calory %></td>
+        <td><strong><%= @calory.date_calory %></strong></td>
       </tr>
       </tbody>
     </table>
   </br>
-    </br>
-    <table class="table is-fullwidth is-striped">
-      <thead>
-      <tr>
-        <th>Burned calories</th>
-        <th>Comment burned calories</th>
-        <th>Date</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td><%= @weight.burn_calorie %></td>
-        <td><%= @weight.comment_calories_burned %></td>
-        <td><strong><%= @weight.date %></strong></td>
-      </tr>
-      </tbody>
-    </table>
   </div>
 </div>
-  <%= link_to 'Back', weights_path , class: "button is-link button is-primary is-medium"%>
+  <%= link_to 'Back', calories_path , class: "button is-link button is-primary is-medium"%>
 </div>
 
 
