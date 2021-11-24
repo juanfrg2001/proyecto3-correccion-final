@@ -1,21 +1,39 @@
-<% provide(:title, 'Reset password') %>
-<h1>Reset password</h1>
+<section class="hero is-medium fondo3">
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_with(model: @user, url: password_reset_path(params[:id]),
-                  local: true) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
-
-      <%= hidden_field_tag :email, @user.email %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-      <%= f.submit "Update password", class: "btn btn-primary" %>
-    <% end %>
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-2">Your registration</h1>
+    <div id="hero-input-group" class="field has-addons has-addons-centered">
+    </div>
   </div>
+</section>
+</br>
+</br>
+<div class="container is-max-desktop">
+  <div class="card-table">
+    <div class="content">
+      <table class="table is-fullwidth is-striped">
+        <thead>
+        <tr>
+          <th>Type of calorie</th>
+          <th>Comment eaten calories</th>
+          <th>Amount of calories</th>
+          <th>Description</th>
+          <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><%= @calory.type_calory %></td>
+          <td><%= @calory.comment_calory %></td>
+          <td><%= @calory.cont_calories %></td>
+          <td><%= @calory.description_calory %></td>
+          <td><strong><%= @calory.date_calory %></strong></td>
+        </tr>
+        </tbody>
+      </table>
+      </br>
+    </div>
+  </div>
+  <%= link_to 'Back', calories_path , class: "button is-link button is-primary is-medium"%>
 </div>
+

@@ -20,19 +20,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def edit
-  end
-
-  def update
-    if params[:user][:password].empty?                  # Case (3)
-      @user.errors.add(:password, "can't be empty")
-      render 'edit'
-    elsif @user.update(user_params)                     # Case (4)
-      log_in @user
-      flash[:success] = "Password has been reset."
-      redirect_to @user
-    else
-      render 'edit'                                     # Case (2)
-    end
+    @calories = Calory.where(user_id: current_user.id)
   end
 
   private
