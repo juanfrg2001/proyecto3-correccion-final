@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'chart', to: 'calories#chart'
   resources :calories
   resources :weights
+  resources :token_share
   devise_for :users
 
 end

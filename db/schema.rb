@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_133722) do
+ActiveRecord::Schema.define(version: 2021_11_24_140656) do
 
   create_table "calories", force: :cascade do |t|
     t.string "comment_calory"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2021_11_22_133722) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "cont_register"
+    t.string "token_digest"
+    t.datetime "token_sent_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

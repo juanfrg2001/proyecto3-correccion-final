@@ -25,6 +25,7 @@ gem 'chartkick'
 gem 'devise'
 gem 'kaminari', '~> 0.17.0'
 gem 'sendgrid-ruby'
+gem 'bcrypt'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
