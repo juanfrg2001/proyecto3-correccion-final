@@ -10,8 +10,8 @@ import "channels"
 import "bulma"
 import "chartkick/chart.js"
 import "jquery"
-import "moment"
-import "daterangepicker"
+import "moment/moment"
+import "daterangepicker/daterangepicker"
 
 
 Rails.start()

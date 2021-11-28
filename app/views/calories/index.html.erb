@@ -7,13 +7,7 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <%= form_for(:search, class: 'form-inline', url: calories_path, method: :get) do |form| %>
-                <div class="form-group">
-                  <%= form.label :dob %>
-                  <%= form.text_field :dob, class: 'form-control', data: { behavior: 'daterangepicker' } %>
-                </div>
-                <%= form.submit "Search", class: 'btn btn-success' %>
-              <% end %>
+              <input type="text" id="rangepicker">
             </div>
           </div>
         </div>
@@ -241,3 +235,6 @@
 
 
 <% end %>
+<script>
+    $("#rangepicker").daterangepicker({});
+</script>

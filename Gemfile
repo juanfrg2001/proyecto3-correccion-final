@@ -29,6 +29,7 @@ gem 'bcrypt'
 gem 'jquery-rails'
 gem 'momentjs-rails'
 gem 'bootstrap-daterangepicker-rails'
+gem 'groupdate'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
