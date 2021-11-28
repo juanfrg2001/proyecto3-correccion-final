@@ -1,9 +1,6 @@
 class Weight < ActiveRecord::Base
   belongs_to :user
-  validates :height, presence: true, numericality: {only_integer: true}
-  validates :weight, presence: true, numericality: {only_integer: true}
-  validates :years_old, presence: true, numericality: {only_integer: true}
-  validates :sex, presence: true, length: {maximum: 1}
+
 
 
 

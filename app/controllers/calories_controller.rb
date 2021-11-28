@@ -5,15 +5,19 @@ class CaloriesController < ApplicationController
 
   def index
     unless current_user.nil?
-      if params[:search] && params[:search][:dob].present?
-        start_date, end_date = params[:search][:dob].split(' - ')
-        @calories = Calory.having_dob_between(start_date, end_date)
+
+      if params[:keyword] && params[:keyword2].present?
+          palabra = "%#{params[:keyword]}%"
+          palabra2 = "%#{params[:keyword2]}%"
+          word = Date.parse(palabra)
+          word2 = Date.parse(palabra2)
+          @calories = Calory.where('date_calory BETWEEN ? AND ?', word, word2).where(user_id: current_user.id)
       else
         @calories = Calory.where(user_id: current_user.id)
       end
     end
-
   end
+
   def chart
     unless current_user.nil?
       @calories = Calory.all.order(date_calory: :desc)

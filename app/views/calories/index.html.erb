@@ -7,7 +7,7 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <input type="text" id="rangepicker">
+              <input type="text" class="daterange"/>
             </div>
           </div>
         </div>
@@ -18,6 +18,8 @@
     </div>
     </div>
   </section>
+
+
   </br>
   </br>
   </br>
@@ -41,6 +43,40 @@
       </br>
       </br>
   </div>
+    <%= form_tag calories_path , method: :get do %>
+      <div class="card-content">
+        <div class="content">
+          <p class = "colorWhite">Search filter by date :</p>
+          <div class="control has-icons-left has-icons-right search-field">
+            <%= date_field :keyword,nil ,placeholder:"Beginner date", class:"input is-large" %><span class="icon is-medium is-left"><i class="fa fa-search"></i></span>
+            <%= date_field :keyword2,nil ,placeholder:"Finally date", class:"input is-large" %><span class="icon is-medium is-left"><i class="fa fa-search"></i></span>
+            </br>
+            </br>
+          </div>
+        </div>
+        <%= content_tag :button, type: :submit do %>
+          Search by Date
+        <% end %>
+      </div>
+    <% end %>
+    <%= form_tag calories_path , method: :get do %>
+      <div class="card-content">
+        <div class="content">
+          <p class = "colorWhite">Search filter by comments</p>
+          <div class="control has-icons-left has-icons-right search-field">
+            <%= text_field_tag :keyword3,nil ,placeholder:"Search by description", class:"input is-large",width:"100" %><span class="icon is-medium is-left"><i class="fa fa-search"></i></span>
+            </br>
+            </br>
+          </div>
+        </div>
+        <%= content_tag :button, type: :submit do %>
+          Search
+        <% end %>
+      </div>
+    <% end %>
+    </br>
+    <%= link_to 'See all Registers', calories_path , class:"button is-link is-fullwidth has-text-weight-medium is-medium"%>
+    </br>
   <br class="featured">
   <div class="card-table">
     <div class="content">
@@ -143,21 +179,12 @@
     </br>
     </br>
   </div>
-  <script>
-      "use strict";
-
-      $(function(){
-          $('[data-behavior=daterangepicker]').daterangepicker({
-              locale: { format: 'DD/MM/YYYY'},
-              cancelLabel: 'Clear'
-          });
-
-          $('[data-behavior=daterangepicker]').on('cancel.daterangepicker', function(){
-              $(this).val(' ');
-          });
-
+  <script type="text/javascript">
+      $(document).ready(function() {
+          $('input[class="daterange"]').daterangepicker();
       });
   </script>
+
 <% else %>
 <section class="hero is-medium fondo1">
   <div class="hero-body">
@@ -235,6 +262,8 @@
 
 
 <% end %>
-<script>
-    $("#rangepicker").daterangepicker({});
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('input[class="daterange"]').daterangepicker();
+    });
 </script>
