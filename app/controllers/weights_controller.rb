@@ -5,7 +5,6 @@ class WeightsController < ApplicationController
 
   def index
     unless current_user.nil?
-      @weights = Weight.page(params[:page]).per(35).all.order(date_weight: :desc).where(user_id: current_user.id)
       @weights = Weight.all.order(date_weight: :desc)
       @chart_weight = current_user.weights.group_by_day(:date_weight, format: "%a").count
     end
