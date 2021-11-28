@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_150513) do
+ActiveRecord::Schema.define(version: 2021_11_28_175408) do
 
   create_table "calories", force: :cascade do |t|
     t.string "comment_calory"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_150513) do
     t.integer "cont_calories"
     t.string "description_calory"
     t.string "type_calory"
+    t.integer "type"
     t.index ["user_id"], name: "index_calories_on_user_id"
   end
 

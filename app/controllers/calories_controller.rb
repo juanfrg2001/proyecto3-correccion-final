@@ -18,7 +18,7 @@ class CaloriesController < ApplicationController
     unless current_user.nil?
       @calories = Calory.all.order(date_calory: :desc)
       @chart_data = Calory.types.keys.map do |type|
-        { name: type.capitalize, data: current_user.calories.where(type_calory: type).group_by_day(:date_calory).count}
+        { name: type.capitalize, data: current_user.calories.where(type: type).group_by_day(:date_calory).sum(:cont_calories)}
 
       end
     end
@@ -69,7 +69,7 @@ class CaloriesController < ApplicationController
   end
 
   def calory_params
-    params.require(:calory).permit(:type_calory ,:comment_calory,:date_calory,:cont_calories,:description_calory)
+    params.require(:calory).permit(:type ,:comment_calory,:date_calory,:cont_calories,:description_calory)
   end
 
 end
