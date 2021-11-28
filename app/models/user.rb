@@ -71,6 +71,11 @@ class User < ActiveRecord::Base
     update(cont_register: cont_register + 1)
   end
 
+  def update_visits_count_delete
+    save if calories.nil?
+    update(cont_register: cont_register - 1)
+  end
+
 
   private
 

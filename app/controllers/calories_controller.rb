@@ -16,9 +16,9 @@ class CaloriesController < ApplicationController
   end
   def chart
     unless current_user.nil?
-      @calories = Calory.all.order(date: :desc)
+      @calories = Calory.all.order(date_calory: :desc)
       @chart_data = Calory.types.keys.map do |type|
-        { name: type.capitalize, data: Calory.where(type: type).group_by_day(:date).sum(:cont_calories) }
+        { name: type.capitalize, data: Calory.where(type_calory: type).group_by(&:date_calory) }
       end
     end
   end
@@ -55,6 +55,7 @@ class CaloriesController < ApplicationController
 
     def destroy
       @calory.destroy
+      @user = current_user.update_visits_count_delete
       flash[:success] = "Se elimino correctamente"
       redirect_to calories_path
     end
@@ -67,7 +68,7 @@ class CaloriesController < ApplicationController
   end
 
   def calory_params
-    params.require(:calory).permit(:type_calory,:comment_calory,:date_calory,:cont_calories,:description_calory)
+    params.require(:calory).permit(:type_calory ,:comment_calory,:date_calory,:cont_calories,:description_calory)
   end
 
 end
