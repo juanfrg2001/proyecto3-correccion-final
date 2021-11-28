@@ -13,7 +13,7 @@ class CaloriesController < ApplicationController
           word2 = Date.parse(palabra2)
           @calories = Calory.where('date_calory BETWEEN ? AND ?', word, word2).where(user_id: current_user.id)
       else
-        @calories = Calory.where(user_id: current_user.id)
+        @calories = Calory.paginate(page: params[:page]).where(user_id: current_user.id)
       end
     end
   end
@@ -22,7 +22,7 @@ class CaloriesController < ApplicationController
     unless current_user.nil?
       @calories = Calory.all.order(date_calory: :desc)
       @chart_data = Calory.types.keys.map do |type|
-        { name: type.capitalize, data: current_user.calories.where(type: type).group_by_day(:date_calory).sum(:cont_calories)}
+        { name: type.capitalize, data: current_user.calories.where(type: type).group_by_day(:date_calory).sum(:cont_calories).where(['date_calory >= (?)',Date.today]).where(['date_calory <= (?)',(Date.today + 30)])}
       end
     end
   end

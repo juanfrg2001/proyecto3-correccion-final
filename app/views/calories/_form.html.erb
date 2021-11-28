@@ -11,11 +11,13 @@
             <p class="is-size-4"><%= comment %> </p>
 
           </div>
+
+
           <div class="column is-one-third has-text-left">
             <div class="field">
               <label class="label">Type of calories</label>
               <div class="control">
-                <%= form.text_field :type, placeholder: "Calories Burned",class:"input is-medium"%>
+                <%= form.select :type, ['burned', 'gained'], class:"input is-medium dropdown-menu dropdown-item" , id:"dropdown-menu" ,role:"menu"%>
               </div>
             </div>
             <div class="field">
@@ -51,6 +53,7 @@
         </div>
       </div>
     </div>
+
   <% end %>
   <%= link_to 'Back', calories_path , class:"button is-link is-fullwidth has-text-weight-medium is-medium"%>
 </section>

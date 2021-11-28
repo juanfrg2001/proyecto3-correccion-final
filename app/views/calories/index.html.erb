@@ -80,8 +80,10 @@
   <br class="featured">
   <div class="card-table">
     <div class="content">
+      <%= will_paginate %>
       <table class="table is-fullwidth is-striped">
         <tbody>
+
         <% @calories.each do |calory| %>
           <tr>
             <td width="5%"><i class="fa fa-bell-o"></i></td>
@@ -91,7 +93,7 @@
         <% end %>
         </tbody>
       </table>
-
+      <%= will_paginate %>
     </div>
   </div>
   </br>
