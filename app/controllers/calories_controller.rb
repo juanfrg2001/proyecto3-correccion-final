@@ -9,7 +9,7 @@ class CaloriesController < ApplicationController
         start_date, end_date = params[:search][:dob].split(' - ')
         @calories = Calory.having_dob_between(start_date, end_date)
       else
-        @calories = Calory.all
+        @calories = Calory.where(user_id: current_user.id)
       end
     end
 
