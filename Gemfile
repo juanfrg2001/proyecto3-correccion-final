@@ -30,7 +30,7 @@ gem 'jquery-rails'
 gem 'momentjs-rails'
 gem 'will_paginate', '3.3.0'
 gem 'bootstrap-will_paginate', '1.0.0'
-
+gem 'faker'
 gem 'bootstrap-daterangepicker-rails'
 gem 'groupdate'
 # Use Active Storage variant
