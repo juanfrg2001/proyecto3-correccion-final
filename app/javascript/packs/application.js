@@ -9,6 +9,10 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "bulma"
 import "chartkick/chart.js"
+import "jquery"
+import "moment"
+import "daterangepicker"
+
 
 Rails.start()
 Turbolinks.start()

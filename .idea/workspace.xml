@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80094ec1-05ce-4551-b651-1e643a050ceb" name="Changes" comment="Update" />
+    <list default="true" id="80094ec1-05ce-4551-b651-1e643a050ceb" name="Changes" comment="Update">
+      <change beforePath="$PROJECT_DIR$/.idea/pr3-Hogaru.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pr3-Hogaru.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/calories_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/calories_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/packs/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/calory.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/calory.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/weight.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/weight.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/calories/chart.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/calories/chart.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/calories/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/calories/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Hogaru/pr3-Hogaru" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
@@ -137,6 +154,8 @@
       <workItem from="1637153761430" duration="21025000" />
       <workItem from="1637583960543" duration="8132000" />
       <workItem from="1637762346826" duration="4736000" />
+      <workItem from="1637933868527" duration="226000" />
+      <workItem from="1638105848710" duration="3941000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1637763782913</created>

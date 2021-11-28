@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :calories
   has_many :weights
+  before_save :set_visits_count
   attr_accessor :remember_token, :activation_token, :reset_token
 
   def User.digest(string)
@@ -65,8 +66,17 @@ class User < ActiveRecord::Base
     reset_sent_at < 2.hours.ago
   end
 
+  def update_visits_count
+    save if calories.nil?
+    update(cont_register: cont_register + 1)
+  end
+
 
   private
+
+  def set_visits_count
+    self.cont_register ||= 0
+  end
 
   # Converts email to all lower-case.
   def downcase_email

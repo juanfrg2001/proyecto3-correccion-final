@@ -26,6 +26,9 @@ gem 'devise'
 gem 'kaminari', '~> 0.17.0'
 gem 'sendgrid-ruby'
 gem 'bcrypt'
+gem 'jquery-rails'
+gem 'momentjs-rails'
+gem 'bootstrap-daterangepicker-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
