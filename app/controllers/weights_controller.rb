@@ -6,8 +6,11 @@ class WeightsController < ApplicationController
   def index
     unless current_user.nil?
       @weights = Weight.where(user_id: current_user.id)
+      @calories = Weight.all.order(date_calory: :desc)
+      @chart_data = Weight.where(['date_calory >= (?)',Date.today]).where(['date_calory <= (?)',(Date.today + 30)]).group_by_day(:date_calory).sum(:cont_calories)
     end
   end
+
 
   def edit
   end

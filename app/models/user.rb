@@ -57,8 +57,8 @@ class User < ActiveRecord::Base
   end
 
   # Sends password reset email.
-  def send_password_reset_email
-    UserMailer.password_reset(self).deliver_now
+  def send_password_reset_email(email)
+    UserMailer.password_reset(email).deliver_now
   end
 
   # Returns true if a password reset has expired.

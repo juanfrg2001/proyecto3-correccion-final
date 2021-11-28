@@ -77,12 +77,11 @@
     <%= link_to 'See all Registers', calories_path , class:"button is-link is-fullwidth has-text-weight-medium is-medium"%>
     </br>
   <br class="featured">
-
+  <%= will_paginate @calories, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
   <div class="card-table">
     <div class="content">
       <table class="table is-fullwidth is-striped">
         <tbody>
-        <%= will_paginate %>
         <% @calories.each do |calory| %>
           <tr>
             <td width="5%"><i class="fa fa-bell-o"></i></td>
@@ -181,11 +180,6 @@
     </br>
     </br>
   </div>
-  <script type="text/javascript">
-      $(document).ready(function() {
-          $('input[class="daterange"]').daterangepicker();
-      });
-  </script>
 
 <% else %>
 <section class="hero is-medium fondo1">
@@ -264,8 +258,4 @@
 
 
 <% end %>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('input[class="daterange"]').daterangepicker();
-    });
-</script>
+
