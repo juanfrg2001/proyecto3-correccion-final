@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'chart', to: 'calories#chart'
   resources :calories
   resources :weights
-  resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :password_resets
   devise_for :users
 
 end
