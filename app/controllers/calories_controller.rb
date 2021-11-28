@@ -17,7 +17,10 @@ class CaloriesController < ApplicationController
   def chart
     unless current_user.nil?
       @calories = Calory.all.order(date_calory: :desc)
-      @chart_data = Calory.group(:type_calory).group_by_day(:date_calory).count
+      @chart_data = Calory.types.keys.map do |type|
+        { name: type.capitalize, data: current_user.calories.where(type_calory: type).group_by_day(:date_calory).count}
+
+      end
     end
   end
 
