@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
 
 
 
+
+
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
              BCrypt::Engine.cost
@@ -70,7 +72,7 @@ class User < ActiveRecord::Base
 
   def update_visits_count
     save if calories.nil?
-    update(cont_register: cont_register + 1)
+    update(cont_register: self.cont_register + 1)
   end
 
   def update_visits_count_delete

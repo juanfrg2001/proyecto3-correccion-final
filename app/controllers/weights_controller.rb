@@ -18,10 +18,6 @@ class WeightsController < ApplicationController
   def edit
   end
 
-  def chart
-    @weights = Weight.where(user_id: current_user.id)
-  end
-
 
   def new
     @weight = Weight.new

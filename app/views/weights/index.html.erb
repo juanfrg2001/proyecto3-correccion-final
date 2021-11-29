@@ -46,6 +46,7 @@
     </div>
 
   </div>
+  <%= column_chart Weight.group_by_day(:date_weight).sum(:weight) %>
   </br>
   </br>
   <%= link_to 'Back', calories_path  , class: "button is-link button is-primary is-medium"%>
