@@ -4,8 +4,9 @@ class PasswordResetsController < ApplicationController
   end
 
   def create
-    current_user.create_reset_digest
-    current_user.send_password_reset_email(params[:email])
+    @user = current_user.create_reset_digest
+    @user = current_user.send_password_reset_email(params[:email])
+    @user = params[:user]
     flash[:info] = "Email sent with password reset instructions"
     redirect_to root_url
   end

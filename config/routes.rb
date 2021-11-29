@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   resources :password_resets
   devise_for :users
 
+  get 'send' => 'send#index'
+  post 'send' => 'send#create'
+
 end
