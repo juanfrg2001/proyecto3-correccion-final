@@ -6,7 +6,7 @@ class Calory < ActiveRecord::Base
   validates :date_calory , presence: true
   validates :cont_calories , presence: true
   validates :description_calory , presence: true
-  after_create :update_visits_count
+
 
 
   enum type: [:burned, :gained]

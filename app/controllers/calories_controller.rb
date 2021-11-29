@@ -35,6 +35,7 @@ class CaloriesController < ApplicationController
   def create
     @calory = current_user.calories.new(calory_params)
     if @calory.save
+      @user = current_user.update_visits_count
       flash[:notice] = 'The calory was created succefull'
       redirect_to calories_path
     else
