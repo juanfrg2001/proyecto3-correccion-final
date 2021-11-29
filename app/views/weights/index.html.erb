@@ -34,18 +34,13 @@
           <h2 class="subtitle">Register your weight</h2>
         </article>
       </div>
-      <div class="column is-3">
-        <article>
-          <figure class="image is-5by3">
-            <%= link_to image_tag("image_Home/image-estadistica.png", alt: "fondo image", width:"160"),
-                        result_path %>
-          </figure>
-          <h2 class="subtitle">Estadistics</h2>
-        </article>
-      </div>
+
     </div>
 
   </div>
+  </br>
+  </br>
+  </br>
   <%= column_chart Weight.group_by_day(:date_weight).sum(:weight) %>
   </br>
   </br>

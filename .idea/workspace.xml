@@ -7,8 +7,11 @@
     <list default="true" id="80094ec1-05ce-4551-b651-1e643a050ceb" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/calories_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/calories_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/weights_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/weights_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/calory.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/calory.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/weights/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/weights/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/weights/result.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/weights/result.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +156,7 @@
       <workItem from="1637762346826" duration="4736000" />
       <workItem from="1637933868527" duration="226000" />
       <workItem from="1638105848710" duration="32464000" />
-      <workItem from="1638148160057" duration="9530000" />
+      <workItem from="1638148160057" duration="10034000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1637763782913</created>
