@@ -11,7 +11,7 @@ class WeightsController < ApplicationController
 
   def result
     @weights = Weight.all.order(date_calory: :desc)
-    @chart_data = Weight.where(['date_calory >= (?)',Date.today]).where(['date_calory <= (?)',(Date.today + 30)]).group_by_day(:date_calory).sum(:cont_calories)
+
   end
 
 
