@@ -9,7 +9,7 @@
 </br>
 </br>
 <div class="hero-body">
-  <%= column_chart Weight.group_by_day(:date_weight).sum(:info_calories) %>
+  <%= column_chart Weight.group_by_day(:date_weight).sum(:weight) %>
 
   <%= link_to 'Back', weights_path , class: "button is-link button is-primary is-medium"%>
 </div>
