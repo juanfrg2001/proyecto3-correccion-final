@@ -13,7 +13,7 @@
     <div class="content">
       <table class="table is-fullwidth is-striped">
         <tbody>
-        <% @weightst_table.each do |load| %>
+        <% @weights.each do |load| %>
           <tr>
             <td width="5%"><i class="fa fa-bell-o"></i></td>
             <td><%= load.user.email %><a> Register date : </a> <%= load.date_weight %></td>
@@ -33,12 +33,14 @@
           </figure>
           <h2 class="subtitle">Register your weight</h2>
         </article>
+      </div>
+      <div class="column is-3">
         <article>
           <figure class="image is-5by3">
-            <%= link_to image_tag("image_Home/imagen-peso.jpg", alt: "fondo image", width:"160"),
-                        chart_path %>
+            <%= link_to image_tag("image_Home/image-estadistica.png", alt: "fondo image", width:"160"),
+                        result_path %>
           </figure>
-          <h2 class="subtitle">Register your weight</h2>
+          <h2 class="subtitle">Estadistics</h2>
         </article>
       </div>
     </div>
