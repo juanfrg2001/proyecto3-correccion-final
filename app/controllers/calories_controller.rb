@@ -13,7 +13,8 @@ class CaloriesController < ApplicationController
           word2 = Date.parse(palabra2)
           @calories = Calory.paginate(page: params[:page]).where('date_calory BETWEEN ? AND ?', word, word2).where(user_id: current_user.id)
       else
-        @calories = Calory.paginate(page: params[:page]).where(user_id: current_user.id)
+        palabra2 = "%#{params[:keyword3]}%"
+        @calories = Calory.paginate(page: params[:page]).where('description_calory LIKE ? ',  palabra2).where(user_id: current_user.id).all
       end
     end
   end
