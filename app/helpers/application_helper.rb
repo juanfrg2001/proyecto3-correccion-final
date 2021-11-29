@@ -1,7 +1,9 @@
 module ApplicationHelper
-  def dob_from_parameters
-    if params[:search].present?
-      params[:search][:dob]
+
+  def flash_class(key)
+    case key
+     when 'notice' then 'is_succes'
+     when 'alert' then 'is_danger'
     end
   end
 end

@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   before_save :set_visits_count
   attr_accessor :remember_token, :activation_token, :reset_token
 
+
+
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
              BCrypt::Engine.cost

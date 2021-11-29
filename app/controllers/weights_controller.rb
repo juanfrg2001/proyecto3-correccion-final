@@ -28,12 +28,13 @@ class WeightsController < ApplicationController
   end
 
   def create
+
     @weight = current_user.weights.new(weight_params)
     if @weight.save
-      flash.now[:success] = 'The article was created succefull'
+      flash[:notice] = 'The weight was created succefull'
       redirect_to weights_path
     else
-      flash.now[:alert] = 'OH NO!'
+      flash.now[:notice] = 'OH NO!'
       redirect_to new_weight_path
     end
   end
@@ -43,14 +44,15 @@ class WeightsController < ApplicationController
 
   def destroy
     @weight.destroy
-    flash[:notice] = "The post was delete"
+    flash[:alert] = "The weight was delete"
     redirect_to weights_path
   end
   def update
     if @weight.update(weight_params)
+      flash[:notice] = "The weight was update"
       redirect_to @weight
     else
-      flash[:error] = "Error"
+      flash[:alert] = "Error"
     end
   end
 
@@ -62,6 +64,6 @@ class WeightsController < ApplicationController
   end
 
   def weight_params
-    params.require(:weight).permit(:eat_calorie, :burn_calorie, :comment_calories_eaten, :comment_calories_burned ,:date)
+    params.require(:weight).permit(:weight, :date_weight, :years_old, :height, :sex, :description_weight)
   end
 end

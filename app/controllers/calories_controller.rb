@@ -35,10 +35,10 @@ class CaloriesController < ApplicationController
     @calory = current_user.calories.new(calory_params)
     if @calory.save
       @user = current_user.update_visits_count
-      flash.now[:success] = 'The article was created succefull'
+      flash[:notice] = 'The calory was created succefull'
       redirect_to calories_path
     else
-      flash.now[:alert] = 'OH NO!'
+      flash[:alert] = 'OH NO!'
       redirect_to new_calory_path
     end
   end
@@ -51,6 +51,7 @@ class CaloriesController < ApplicationController
 
   def update
     if @calory.update(calory_params)
+      flash[:success] = "The calory was update correctly"
       redirect_to @calory
     else
       flash[:alert] = "Error"
@@ -60,7 +61,7 @@ class CaloriesController < ApplicationController
     def destroy
       @calory.destroy
       @user = current_user.update_visits_count_delete
-      flash[:success] = "Se elimino correctamente"
+      flash[:success] = "The calory was delete correctly"
       redirect_to calories_path
     end
 
