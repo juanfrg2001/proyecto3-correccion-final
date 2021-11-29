@@ -4,10 +4,10 @@ class PasswordResetsController < ApplicationController
   end
 
   def create
-      current_user.create_reset_digest
-      current_user.send_password_reset_email
-      flash[:info] = "Email sent with password reset instructions"
-      redirect_to root_url
+    current_user.create_reset_digest
+    current_user.send_password_reset_email(params[:email])
+    flash[:info] = "Email sent with password reset instructions"
+    redirect_to root_url
   end
 
   def edit
@@ -17,7 +17,7 @@ class PasswordResetsController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:password, :password_confirmation, :email)
+    params.require(:user).permit(:password, :password_confirmation)
   end
 
   # Before filters
